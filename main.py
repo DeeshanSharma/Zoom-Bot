@@ -8,6 +8,8 @@ import json
 from datetime import datetime as dt
 import subprocess
 import time
+import pyautogui as gui
+import link
 
 def getTime():
     with open('timetable.json', 'r') as f:
@@ -26,7 +28,26 @@ def checkClass(timetable):
 
 def openZoom():
     subprocess.Popen(r"C:\Users\princ\AppData\Roaming\Zoom\bin\Zoom.exe")
-    time.sleep(20)
+    time.sleep(15)
+    joinClass()
+
+def buttonClick(image):
+    btn = gui.locateCenterOnScreen(image)
+    gui.moveTo(btn)
+    gui.click()
+    time.sleep(1)
+
+def buttonWrite(text):
+    gui.write(text)
+    time.sleep(1)
+    gui.press('enter')
+
+def joinClass():
+    time.sleep(2)
+    buttonClick('images/main-join-btn.png')
+    buttonWrite(link.ID)
+    time.sleep(4)
+    buttonWrite(link.PASS)
 
 timetable = getTime()
 checkClass(timetable)
