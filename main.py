@@ -23,7 +23,6 @@ def checkClass(timetable):
         cTime = dt.now().strftime("%I:%M")
         if cTime in schedule:
             openZoom()
-        else:
             time.sleep(240)
 
 def openZoom():
@@ -35,7 +34,7 @@ def buttonClick(image):
     btn = gui.locateCenterOnScreen(image)
     gui.moveTo(btn)
     gui.click()
-    time.sleep(1)
+    time.sleep(2)
 
 def buttonWrite(text):
     gui.write(text)
@@ -43,10 +42,9 @@ def buttonWrite(text):
     gui.press('enter')
 
 def joinClass():
-    time.sleep(2)
     buttonClick('images/main-join-btn.png')
     buttonWrite(link.ID)
-    time.sleep(4)
+    time.sleep(6)
     buttonWrite(link.PASS)
 
 timetable = getTime()
