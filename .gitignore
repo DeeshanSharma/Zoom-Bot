@@ -1,2 +1,4 @@
 .v*
 __pycache__
+link.py
+timetable.json
