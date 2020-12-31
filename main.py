@@ -26,7 +26,7 @@ def checkClass(timetable):
             time.sleep(240)
 
 def openZoom():
-    subprocess.Popen(r"C:\Users\princ\AppData\Roaming\Zoom\bin\Zoom.exe")
+    subprocess.Popen(r"C:\Users\princ\AppData\Roaming\Zoom\bin\Zoom.exe") # Change app location here
     time.sleep(15)
     joinClass()
 
