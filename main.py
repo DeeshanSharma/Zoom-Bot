@@ -22,7 +22,7 @@ def getTime():
 
 
 def checkClass(timetable):
-    day = dt.today().strftime("%A").lower()
+    day = dt.now().strftime("%A").lower()
     schedule = timetable[day]
     while True:
         cTime = dt.now().strftime("%I:%M")
