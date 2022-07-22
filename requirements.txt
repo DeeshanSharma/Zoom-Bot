@@ -7,3 +7,4 @@ pyperclip==1.8.1
 PyRect==0.1.4
 PyScreeze==0.1.26
 PyTweening==1.0.3
+getpass
