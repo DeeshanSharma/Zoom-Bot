@@ -64,6 +64,7 @@ OR
 This app is tested and works on:
 
 - Windows 10
+- Windows 11
 
 # Future Plans
 
